@@ -28,7 +28,8 @@ import os
 DEBUG = False  # Set to False in production
 
 # Add your Vercel deployment domain to ALLOWED_HOSTS
-ALLOWED_HOSTS = ['.vercel.app',"*"]
+# vercel_app/settings.py
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
