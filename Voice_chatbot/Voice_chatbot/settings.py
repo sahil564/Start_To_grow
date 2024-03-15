@@ -23,9 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(2#1bgkd+a-h5!8kk1h=uz*52l4%q2(j@%!e)999-%$9-ei)*c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import os
 
-ALLOWED_HOSTS = [".vercel.app"]
+DEBUG = False  # Set to False in production
+
+# Add your Vercel deployment domain to ALLOWED_HOSTS
+ALLOWED_HOSTS = ['.vercel.app',"*"]
+
+# Static files (CSS, JavaScript, images)
+STATIC_URL = '/static/'
+
+# Define the location for static files to be collected to
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Application definition
